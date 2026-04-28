@@ -3,21 +3,9 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/sharnith-bit/resume-app.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 bat 'docker build -t resume-app:1.0 .'
-            }
-        }
-
-        stage('Check Docker Images') {
-            steps {
-                bat 'docker images'
             }
         }
 
@@ -28,7 +16,7 @@ pipeline {
             }
         }
 
-        stage('Verify Pods') {
+        stage('Verify') {
             steps {
                 bat 'kubectl get pods'
                 bat 'kubectl get svc'

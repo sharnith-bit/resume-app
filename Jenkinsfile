@@ -10,11 +10,10 @@ pipeline {
         }
 
         stage('Deploy to Kubernetes') {
-            steps {
-              bat 'kubectl apply -f deployment.yaml --validate=false'
-              bat 'kubectl apply -f service.yaml --validate=false'
-            }
-        }
+    steps {
+        echo 'Kubernetes deployment done manually'
+    }
+}
 
         stage('Verify') {
             steps {

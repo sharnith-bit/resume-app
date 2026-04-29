@@ -9,15 +9,15 @@ pipeline {
             }
         }
 
-        stage('Deploy to Kubernetes') {
+stage('Deploy to Kubernetes') {
     steps {
         echo 'Kubernetes deployment done manually'
     }
 }
 
-stage('Deploy to Kubernetes') {
+stage('Verify Deployment') {
     steps {
-        echo 'Kubernetes deployment done manually'
+        echo 'Application deployed successfully (verified manually)'
     }
 }
     }

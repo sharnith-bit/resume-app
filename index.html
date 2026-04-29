@@ -1,19 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Resume Builder</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Colorful Resume Builder</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- PDF library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
+
 <body>
 
-<h1>Resume Builder</h1>
+<header>
+    <h1>Colorful Resume Builder</h1>
+</header>
 
-<input type="text" id="name" placeholder="Enter Name">
-<input type="text" id="skills" placeholder="Enter Skills">
-<button onclick="generateResume()">Generate</button>
+<div class="container">
 
-<div id="output"></div>
+<div class="form-box">
+    <h3>Enter Details</h3>
+
+    <select id="template">
+        <option value="template1">Template 1 (Classic)</option>
+        <option value="template2">Template 2 (Dark)</option>
+        <option value="template3">Template 3 (Green)</option>
+        <option value="template4">Template 4 (Blue Card)</option>
+        <option value="template5">Template 5 (Gradient)</option>
+    </select>
+
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="text" id="email" placeholder="Email">
+    <input type="text" id="phone" placeholder="Phone">
+
+    <textarea id="objective" placeholder="Objective"></textarea>
+
+    <input type="text" id="skills" placeholder="Skills (comma separated)">
+    <textarea id="education" placeholder="Education"></textarea>
+    <textarea id="experience" placeholder="Experience"></textarea>
+    <textarea id="projects" placeholder="Projects"></textarea>
+
+    <button onclick="generateResume()">Generate Resume</button>
+    <button onclick="downloadPDF()">📄 Download PDF</button>
+</div>
+
+<div class="preview-box">
+    <h3>Live Preview</h3>
+    <div id="output" class="resume template1"></div>
+</div>
+
+</div>
 
 <script src="script.js"></script>
+
 </body>
 </html>

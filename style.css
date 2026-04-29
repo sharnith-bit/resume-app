@@ -1,20 +1,96 @@
-body {
+body{
     font-family: Arial;
-    text-align: center;
+    margin:0;
+    background:#f4f6ff;
 }
 
-input {
-    margin: 5px;
-    padding: 8px;
+header{
+    text-align:center;
+    padding:20px;
+    color:white;
+    background: linear-gradient(135deg,#6c63ff,#48c6ef);
 }
 
-button {
-    padding: 8px 12px;
-    cursor: pointer;
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:20px;
 }
 
-#output {
-    margin-top: 20px;
-    border: 1px solid black;
-    padding: 10px;
+.form-box, .preview-box{
+    flex:1;
+    min-width:320px;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
+
+input, textarea, select{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#6c63ff;
+    color:white;
+}
+
+button:hover{
+    background:#4b42d1;
+}
+
+/* Resume layout */
+.resume{
+    padding:20px;
+}
+
+.section{
+    margin-top:15px;
+    padding-bottom:10px;
+    border-bottom:2px solid #ddd;
+}
+
+.badge{
+    display:inline-block;
+    padding:5px 10px;
+    margin:3px;
+    border-radius:20px;
+    background:#eee;
+}
+
+/* Templates */
+.template1 h2{ color:#6c63ff; }
+
+.template2{
+    background:#1e1e2f;
+    color:white;
+}
+.template2 .section{ border-bottom:1px solid #444; }
+.template2 h2{ color:#00e5ff; }
+
+.template3{
+    background:#eaffea;
+}
+.template3 h2{ color:#2ecc71; }
+
+.template4{
+    background:#f5f9ff;
+    border-left:6px solid #3498db;
+}
+.template4 h2{ color:#3498db; }
+
+.template5{
+    background:linear-gradient(135deg,#ffecd2,#fcb69f);
+}
+.template5 h2{ color:#e74c3c; }

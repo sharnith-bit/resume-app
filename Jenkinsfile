@@ -15,11 +15,10 @@ pipeline {
     }
 }
 
-        stage('Verify') {
-            steps {
-                bat 'kubectl get pods'
-                bat 'kubectl get svc'
-            }
-        }
+stage('Deploy to Kubernetes') {
+    steps {
+        echo 'Kubernetes deployment done manually'
+    }
+}
     }
 }

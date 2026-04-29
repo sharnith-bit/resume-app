@@ -15,6 +15,7 @@ spec:
       containers:
       - name: resume-app
         image: resume-app:1.0
+        imagePullPolicy: Never
         ports:
         - containerPort: 80
-        imagePullPolicy: Never
+        

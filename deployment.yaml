@@ -17,3 +17,4 @@ spec:
         image: resume-app:1.0
         ports:
         - containerPort: 80
+        imagePullPolicy: Never

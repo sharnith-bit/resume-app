@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/sharnith-bit/resume-app.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 bat 'docker build -t resume-app:1.0 .'
